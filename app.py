@@ -1,4 +1,7 @@
 import streamlit as st
+import sys
+import os
+sys.path.append(os.path.abspath("."))
 import asyncio
 from langgraph_workflow import run_validation_pipeline
 
