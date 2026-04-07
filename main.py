@@ -32,5 +32,6 @@ async def validate(request: ValidationRequest):
     return report
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # 🔥 Railway PORT fix
     print("🚀 Starting LUCA V3 Validation Server...")
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=port, reload=False)
