@@ -1,4 +1,4 @@
-from .utils.access_validator import AccessValidatorAgent
+from .access_validator import AccessValidatorAgent
 
 from .drive_fetch import DriveFetchAgent
 from .file_classifier import FileClassifierAgent
