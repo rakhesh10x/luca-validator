@@ -1,7 +1,10 @@
 import streamlit as st
+
+# 🔥 FIX: Make sure project root is in path
 import sys
 import os
-sys.path.append(os.path.abspath("."))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import asyncio
 from langgraph_workflow import run_validation_pipeline
 
@@ -25,7 +28,7 @@ if st.button("Run Validation"):
 
             st.info("⏳ Running validation pipeline...")
 
-            # ✅ ASYNC CALL FIX
+            # ✅ Async execution fix
             result = asyncio.run(
                 run_validation_pipeline(drive_link, rule_sets)
             )
